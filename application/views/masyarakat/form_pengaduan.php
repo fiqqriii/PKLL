@@ -35,7 +35,7 @@
                     <form action="<?= base_url('masyarakat/pengaduan'); ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="judul">Judul <sup class="text-danger">*</sup> </label>
-                            <input type="text" class="form-control" id="judul" name="judul">
+                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan Judul Pengaduan Anda !">
                             <?= form_error('judul', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group">
@@ -56,7 +56,7 @@
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" required class="custom-file-input" id="gambar" name="gambar">
-                                <label class="custom-file-label" for="gambar">Choose file</label>
+                                <label class="custom-file-label" for="gambar">Pilih Gambar</label>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-dark float-right mt-4">Laporkan pengaduan!</button>

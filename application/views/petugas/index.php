@@ -14,10 +14,7 @@
                             <a href="<?= base_url('petugas/pengaduanTag'); ?>" class="card card-link o-hidden shadow border-bottom-info">
                                 <div class="card-header bg-info text-white">Pengaduan <?= $user['status_petugas']; ?></div>
                                 <div class="card-body bg-white text-info h4">
-                                    <i class="fas fa-paper-plane"> </i>
-                                     <div class="text-info float-right">
-                                        <?= count($pengaduan); ?>                                            
-                                    </div>    
+                                    <i class="fas fa-paper-plane"> <?= count($pengaduan); ?> </i>
                                 </div>
                             </a>
                         </div>
@@ -27,7 +24,11 @@
                                 <div class="card-body bg-white text-success h4">
                                     <i class="fas fa-check-double"></i>
                                     <div class="text-success float-right">
-                                      <?= count($selesai); ?>    
+                                        <? else : ?>
+                                            <?= 0; ?>
+                                        <?php if ($selesai != 0) : ?>
+                                            <?= count($selesai); ?>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </a>
@@ -40,7 +41,11 @@
                                         <span class="sr-only">Loading...</span>
                                     </div>
                                     <div class="text-danger float-right">
-                                       <?= count($proses); ?> 
+                                        <?php if ($proses != 0) : ?>
+                                            <?= count($proses); ?>
+                                        <? else : ?>
+                                            <?= 0; ?>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </a>
@@ -69,7 +74,7 @@
                                                     <th scope="row">Nomor</th>
                                                     <th scope="row">Tanggal</th>
                                                     <th scope="row">NIK</th>
-                                                    <th scope="row">Nama</th>
+                                                    <th scope="row">Pelapor</th>
                                                     <th scope="row">Kategori</th>
                                                     <th scope="row">Judul</th>
                                                     <th scope="row">Isi</th>
@@ -83,7 +88,7 @@
                                                     <?php $no = 1; ?>
                                                     <?php foreach ($pengaduan as $p) : ?>
                                                         <td><a href="<?= base_url('petugas/tanggapan/'); ?><?= $p['id_pengaduan']; ?>" class="btn btn-info"> <i class="fas fa-check"></i> </a>
-
+                                                            
                                                         <td><?php $waktu = $p['tgl_pengaduan']; ?>
                                                             <?= date('d M Y', $waktu); ?>
                                                         </td>

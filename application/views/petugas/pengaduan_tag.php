@@ -23,6 +23,7 @@
                                     <th>Nama</th>
                                     <th>Tanggal</th>
                                     <th>Kategori</th>
+                                    <th>Kategori</th>
                                     <th>Judul</th>
                                     <th>Isi</th>
                                     <th>Status</th>
@@ -36,6 +37,7 @@
                                         <td><?php $waktu = $p['tgl_pengaduan']; ?>
                                             <?= date('d M Y', $waktu); ?>
                                         </td>
+                                        <td><?= $p['kategori']; ?></td>
                                         <td><?= $p['kategori']; ?></td>
                                         <td><?= $p['judul_pengaduan']; ?></td>
                                         <td><?= $p['isi_pengaduan']; ?></td>

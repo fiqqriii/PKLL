@@ -70,11 +70,6 @@ class Users_model extends CI_Model {
       return $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
   }
 
-  public function dataPetugas() //data untuk petugas sesuai session
-  {
-      return $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
-  }
-
   public function adminAll()
   {
       return $this->db->get('admin')->result_array();

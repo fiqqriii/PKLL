@@ -73,7 +73,7 @@
                                                     <th>Nomor</th>
                                                     <th>Tanggal</th>
                                                     <th>NIK</th>
-                                                    <th>Nama</th>
+                                                    <th>Pelapor</th>
                                                     <th>Kategori</th>
                                                     <th>Judul</th>
                                                     <th>Isi</th>
